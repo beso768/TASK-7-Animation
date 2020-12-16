@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 ;
+}
+body {
+	margin: 0 auto ;
+	padding: 0 450px;
+	justify-content: center;
+	align-items: center;
+	display: flex ;
+}
+h3 {
+	font-family: 'Pacifico', cursive;
+	font-size: 60px;
+	 color : #4A7479 ;
+}
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 80px ;
+    color: #365154 ;
+}
+.title {
+	margin: 200px auto;
+}
+.circle {
+	position: relative ;
+	max-width: 250px ;
+	height: 200px ;
+	width: 100% ;
+	margin: 100px auto;
+	border-radius: 50% ;
+	overflow: hidden;
+	z-index: 1;
+}
+.background {
+	width: 600px;
+}
+.layer {
+    position:absolute;
+    top:0;
+}
+.road {
+	position: relative;
+	animation-name: road ;
+    animation-duration: 4s ;
+    animation-delay: 0.9s ;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+    animation-iteration-count: infinite; ;
+    animation-timing-function: linear ;
+}
+.rider {
+	width: 85px;
+    position: absolute;
+    bottom: 4px;
+    animation-name: Move ;
+    animation-duration: 0.9s ;
+    animation-delay: 0.9s ;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: 1 ;
+    animation-timing-function: linear ;
+}
+@keyframes Move {
+	0% {
+		left: 0;
+		bottom: 5px;
+	}
+	100% {
+		left: 80px ;
+		bottom: 5px ;
+	}
+}
+@keyframes road {
+	0% {
+		right: 0;
+		bottom: 206px;
+	}
+	100% {
+		right: 300px ;
+		bottom: 206px ;
+	}
+}
